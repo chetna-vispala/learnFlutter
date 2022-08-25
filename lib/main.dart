@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_datatype/Pages/home_page.dart';
 import 'package:learn_datatype/Pages/login_page.dart';
 
@@ -11,30 +12,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     //int age = 27; // only integer (single precision)
     //String name= "Chetna"; // only character
-   // bool female = true; //only true/false
+    // bool female = true; //only true/false
     //double value = 55.0; // float number (double precision)
-  //  num temp = 30.2;    // use for both int & double datatype
-   // var day ="Wednesday"; // compiler automatically knows the type of data on the assigned to variable.
-   // const pi = 3.14; //constant value must be fixed
-   // final string  = name; // you can change the value
-
+    //  num temp = 30.2;    // use for both int & double datatype
+    // var day ="Wednesday"; // compiler automatically knows the type of data on the assigned to variable.
+    // const pi = 3.14; //constant value must be fixed
+    // final string  = name; // you can change the value
 
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      //themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.cyan
+        primarySwatch: Colors.cyan,
+        backgroundColor: Colors.white,
+        primaryTextTheme: GoogleFonts.lektonTextTheme(),
       ),
-      darkTheme: ThemeData(brightness: Brightness.light,
-      ),
+      // darkTheme: ThemeData(
+      //   brightness: Brightness.light,
+      // ),
       initialRoute: "/Login",
       routes: {
-        "/" : (context)=>  HomePage(),
-        "/Login" : (context)=> LoginPage(),
+        "/": (context) => const HomePage(),
+        "/Login": (context) => const LoginPage(),
       },
     );
   }
-
 }
