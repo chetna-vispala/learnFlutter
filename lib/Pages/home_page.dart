@@ -1,24 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:learn_datatype/models/catalog.dart';
 import 'package:learn_datatype/widget/drawer.dart';
+import 'package:learn_datatype/widget/item_widget.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final int days = 30;
+  final String name = "Chetna";
 
+  const HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    const int age = 27; // only integer (single precision)
-    const String name = "Chetna Singh"; // only character
-
+    final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Catalog"),
+        title: const Text("Catalog App"),
       ),
-      body: Center(
-          child: Container(
-        child: const Text("My name is $name and i'm $age year old"),
-
-        ///print Chetna is a 27 year old girl
-      )),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: dummyList.length,
+          itemBuilder: (context, index) {
+            return ItemsWidget(
+              item: dummyList[index],
+            );
+          },
+        ),
+      ),
       drawer: const Mydrawer(),
     );
   }
