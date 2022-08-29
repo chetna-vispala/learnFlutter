@@ -23,8 +23,12 @@ class _MydrawerState extends State<Mydrawer> {
                 padding: EdgeInsets.zero,
                 child: UserAccountsDrawerHeader(
                   margin: EdgeInsets.zero,
-                  accountName: Text("Chetna Singh"),
-                  accountEmail: Text("chetnasingh033@gmail.com"),
+                  accountName: Text("Chetna Singh",
+                  style: TextStyle(color: Colors.white,
+                  fontWeight: FontWeight.bold),),
+                  accountEmail: Text("chetnasingh033@gmail.com",
+                    style: TextStyle(color: Colors.white,
+                        fontWeight: FontWeight.bold),),
                   currentAccountPicture: CircleAvatar(
                     backgroundImage: NetworkImage(imageUrl),
                   ),

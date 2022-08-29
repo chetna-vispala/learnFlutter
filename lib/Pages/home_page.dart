@@ -9,15 +9,16 @@ class HomePage extends StatelessWidget {
     const int age = 27; // only integer (single precision)
     const String name = "Chetna Singh"; // only character
 
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Catalog"),
       ),
       body: Center(
           child: Container(
-            child: const Text("My name is $name and i'm $age year old"),///print Chetna is a 27 year old girl
-          )),
+        child: const Text("My name is $name and i'm $age year old"),
+
+        ///print Chetna is a 27 year old girl
+      )),
       drawer: const Mydrawer(),
     );
   }
